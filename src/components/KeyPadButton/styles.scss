@@ -1,0 +1,25 @@
+@import '../../assets/style/variables';
+
+.btn-atm {
+  margin: 0.2rem;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btn-digital {
+  font-family: "Digital7";
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  background-color: $display-background;
+  color: $digital-font-color;
+  border-color: $digital-font-color;
+  &:hover {
+    color: $digital-font-color;
+  }
+}
+
+.btn-silver {
+  text-transform: uppercase;
+  background-color: $silver-btn-color;
+}

@@ -1,0 +1,53 @@
+@import '../../assets/style/variables';
+
+.input-container {
+  display: flex;
+  height: 40px;
+  align-items: flex-start;
+}
+
+.amount-input {
+  text-align: left;
+  font-size: 2rem;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-family: "Digital7";
+  color: $digital-font-color;
+  padding-right: 4px;
+}
+
+.amount-input:empty {
+  padding-right: 0px;
+}
+
+.amount-cursor-container {
+  height: 100%;
+  padding: 10px 0px 7px 0px;
+}
+
+.amount-cursor {
+  width: 12px;
+  height: 100%;
+  background-color: $digital-font-color;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.amount-label {
+  font-family: "Digital7";
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: $digital-font-color;
+}
