@@ -9,18 +9,18 @@ describe('<ActionKeyPad />', () => {
   const props = {
     enterKeyPress: sinon.spy(),
     cancelKeyPress: sinon.spy(),
-    clearKeyPress: sinon.spy()
+    clearKeyPress: sinon.spy(),
   };
   it('renders <ActionKeyPad />', () => {
     const wrapper = shallow(
-      <ActionKeyPad {...props} />
+      <ActionKeyPad {...props} />,
     );
     expect(wrapper).to.have.lengthOf(1);
   });
 
   it('renders <ActionKeyPad /> children', () => {
     const wrapper = shallow(
-      <ActionKeyPad {...props} />
+      <ActionKeyPad {...props} />,
     );
     expect(wrapper.find(KeyPadButton)).to.have.lengthOf(4);
   });

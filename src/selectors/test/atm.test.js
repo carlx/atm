@@ -2,7 +2,7 @@ import {
   makeSelectAccountBalance,
   makeSelectAtmInternalState,
   makeSelectErrorMessage,
-  makeSelectKeyPadInput
+  makeSelectKeyPadInput,
 } from '../atm';
 import { INITIAL_STATE } from '../../reducers/atm';
 import { ATM_STATE_START } from '../../domain/atm/state/constants';
@@ -12,7 +12,7 @@ describe('Atm Selectors', () => {
   it('should select ATM_START', () => {
     const selector = makeSelectAtmInternalState();
     const mockState = {
-      atm: INITIAL_STATE
+      atm: INITIAL_STATE,
     };
     expect(selector(mockState)).toEqual(ATM_STATE_START)
   });
@@ -23,8 +23,8 @@ describe('Atm Selectors', () => {
     const mockState = {
       atm: {
         ...INITIAL_STATE,
-        keyPadInput
-      }
+        keyPadInput,
+      },
     };
     expect(selector(mockState)).toEqual(keyPadInput)
   })
@@ -35,8 +35,8 @@ describe('Atm Selectors', () => {
     const mockState = {
       atm: {
         ...INITIAL_STATE,
-        accountBalance
-      }
+        accountBalance,
+      },
     };
     expect(selector(mockState)).toEqual(accountBalance)
   })
@@ -47,8 +47,8 @@ describe('Atm Selectors', () => {
     const mockState = {
       atm: {
         ...INITIAL_STATE,
-        errorMessage
-      }
+        errorMessage,
+      },
     };
     expect(selector(mockState)).toEqual(errorMessage)
   })

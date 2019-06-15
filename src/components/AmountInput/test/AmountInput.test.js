@@ -5,19 +5,19 @@ import AmountInput from '../AmountInput';
 
 describe('<AmountInput />', () => {
   const props = {
-    amount: 12
+    amount: 12,
   };
 
   it('renders <AmountInput />', () => {
     const wrapper = shallow(
-      <AmountInput {...props} />
+      <AmountInput {...props} />,
     );
     expect(wrapper).to.have.lengthOf(1);
   });
 
   it('renders <AmountInput /> amount', () => {
     const wrapper = shallow(
-      <AmountInput {...props} />
+      <AmountInput {...props} />,
     );
     const input = wrapper.find('.amount-input');
     expect(input.text()).to.contains('12');

@@ -5,12 +5,12 @@ import {
   cancelKeyPress,
   enterKeyPress,
   withdraw,
-  deposit
+  deposit,
 } from '../../actions/atm';
 import {
   ATM_STATE_DEPOSIT,
   ATM_STATE_ERROR,
-  ATM_STATE_WITHDRAW
+  ATM_STATE_WITHDRAW,
 } from '../../domain/atm/state/constants';
 import { ATM_ERROR_FUNDS_MSG } from '../../domain/atm/message/constants';
 
@@ -23,7 +23,7 @@ describe('Atm reducer', () => {
     const value = 1;
     const expected = {
       ...INITIAL_STATE,
-      keyPadInput: value
+      keyPadInput: value,
     }
     expect(reducer(undefined, numberKeyPress(value))).toEqual(expected);
   });
@@ -35,7 +35,7 @@ describe('Atm reducer', () => {
   it('should handle CANCEL_KEY_PRESS', () => {
     const mockState = {
       ...INITIAL_STATE,
-      machineState: ATM_STATE_WITHDRAW
+      machineState: ATM_STATE_WITHDRAW,
     }
     expect(reducer(mockState, cancelKeyPress())).toEqual(INITIAL_STATE);
   });
@@ -44,13 +44,13 @@ describe('Atm reducer', () => {
     const mockState = {
       ...INITIAL_STATE,
       machineState: ATM_STATE_WITHDRAW,
-      keyPadInput: 12
+      keyPadInput: 12,
     };
     const expected = {
       ...INITIAL_STATE,
       machineState: ATM_STATE_ERROR,
       keyPadInput: 12,
-      errorMessage: ATM_ERROR_FUNDS_MSG
+      errorMessage: ATM_ERROR_FUNDS_MSG,
     }
     expect(reducer(mockState, enterKeyPress())).toEqual(expected);
   });
@@ -58,7 +58,7 @@ describe('Atm reducer', () => {
   it('should handle WITHDRAW', () => {
     const expected = {
       ...INITIAL_STATE,
-      machineState: ATM_STATE_WITHDRAW
+      machineState: ATM_STATE_WITHDRAW,
     }
     expect(reducer(INITIAL_STATE, withdraw())).toEqual(expected);
   });
@@ -66,7 +66,7 @@ describe('Atm reducer', () => {
   it('should handle DEPOSIT', () => {
     const expected = {
       ...INITIAL_STATE,
-      machineState: ATM_STATE_DEPOSIT
+      machineState: ATM_STATE_DEPOSIT,
     }
     expect(reducer(INITIAL_STATE, deposit())).toEqual(expected);
   });

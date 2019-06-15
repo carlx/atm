@@ -11,19 +11,19 @@ describe('<Display />', () => {
     enterKeyPress: sinon.spy(),
     cancelKeyPress: sinon.spy(),
     clearKeyPress: sinon.spy(),
-    numberKeyPress: sinon.spy()
+    numberKeyPress: sinon.spy(),
   };
 
   it('renders <KeyPad />', () => {
     const wrapper = shallow(
-      <KeyPad {...props} />
+      <KeyPad {...props} />,
     );
     expect(wrapper).to.have.lengthOf(1);
   });
 
   it('renders <KeyPad /> children', () => {
     const wrapper = shallow(
-      <KeyPad {...props} />
+      <KeyPad {...props} />,
     );
     const number = wrapper.find(NumberKeyPad);
     const action = wrapper.find(ActionKeyPad);

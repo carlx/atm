@@ -8,19 +8,19 @@ import KeyPadButton from '../../KeyPadButton/KeyPadButton';
 describe('<NumberKeyPad />', () => {
   const props = {
     numberKeyPress: () => sinon.spy(),
-    disabled: false
+    disabled: false,
   };
 
   it('renders <NumberKeyPad />', () => {
     const wrapper = shallow(
-      <NumberKeyPad {...props} />
+      <NumberKeyPad {...props} />,
     );
     expect(wrapper).to.have.lengthOf(1);
   });
 
   it('renders <NumberKeyPad /> children', () => {
     const wrapper = shallow(
-      <NumberKeyPad {...props} />
+      <NumberKeyPad {...props} />,
     );
     expect(wrapper.find(KeyPadButton)).to.have.lengthOf(12);
   });

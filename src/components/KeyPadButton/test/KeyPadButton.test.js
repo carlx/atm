@@ -8,7 +8,7 @@ describe('<KeyPadButton />', () => {
   it('renders <KeyPadButton />', () => {
     const props = {
       color: 'silver',
-      onKeyPress: () => null
+      onKeyPress: sinon.spy(),
     };
     const wrapper = shallow(<KeyPadButton {...props} />);
     const button = wrapper.find('button');
@@ -19,7 +19,7 @@ describe('<KeyPadButton />', () => {
     const onButtonClick = sinon.spy();
     const props = {
       color: 'silver',
-      onKeyPress: onButtonClick
+      onKeyPress: onButtonClick,
     };
     const wrapper = shallow(<KeyPadButton {...props} />);
     wrapper.find('button').simulate('click');

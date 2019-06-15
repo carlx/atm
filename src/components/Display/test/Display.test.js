@@ -7,19 +7,19 @@ import Start from '../../Screens/Start';
 
 describe('<Display />', () => {
   const props = {
-    accountBalance: 12
+    accountBalance: 12,
   };
 
   const startProps = {
     depositRequest: sinon.spy(),
-    withdrawRequest: sinon.spy()
+    withdrawRequest: sinon.spy(),
   };
 
   it('renders <Display /> children', () => {
     const wrapper = shallow(
-      <Display {...props} >
+      <Display {...props}>
         <Start {...startProps} />
-      </Display>
+      </Display>,
     );
     const start = wrapper.find(Start);
     expect(start).to.have.lengthOf(1);
@@ -27,9 +27,9 @@ describe('<Display />', () => {
 
   it('<Display /> contains text', () => {
     const wrapper = shallow(
-      <Display {...props} >
+      <Display {...props}>
         <Start {...startProps} />
-      </Display>
+      </Display>,
     );
     expect(wrapper.text()).to.contains('account balance');
   });
