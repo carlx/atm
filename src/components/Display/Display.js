@@ -7,7 +7,7 @@ const Display = (props) => {
     <div className='card mb-3'>
       <div className='card-body'>
         <div className='balance-container'>
-          <div className='balance'>Account ballance: { props.accountBalance}</div>
+          <div className='balance'>account balance: { props.accountBalance}</div>
         </div>
         <div className='main-container'>
           {props.children}
