@@ -6,7 +6,7 @@ import {
 } from '../atm';
 import { INITIAL_STATE } from '../../reducers/atm';
 import { ATM_STATE_START } from '../../domain/atm/state/constants';
-import { ATM_ERROR_FUNDS_MSG } from '../../domain/atm/messages/constants';
+import { ATM_ERROR_FUNDS_MSG } from '../../domain/atm/message/constants';
 
 describe('Atm Selectors', () => {
   it('should select ATM_START', () => {

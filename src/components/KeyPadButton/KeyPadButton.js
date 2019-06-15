@@ -8,10 +8,11 @@ const KeyPadButton = (props) => {
     btn: true,
     'btn-atm': true,
     'btn-block': true,
-    ['btn-' + props.color]: props.color
+    [`btn-${props.color}`]: props.color,
   });
   return (
     <button
+      type="button"
       className={btnClass}
       onClick={props.onKeyPress}
       disabled={props.disabled || !props.label}
@@ -25,7 +26,7 @@ KeyPadButton.propTypes = {
   label: PropTypes.string,
   disabled: PropTypes.bool,
   onKeyPress: PropTypes.func.isRequired,
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
 };
 
 export default KeyPadButton;

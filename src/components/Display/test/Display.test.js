@@ -9,22 +9,28 @@ describe('<Display />', () => {
   const props = {
     accountBalance: 12
   };
+
   const startProps = {
     depositRequest: sinon.spy(),
     withdrawRequest: sinon.spy()
   };
-  const wrapper = shallow(
-    <Display {...props} >
-      <Start {...startProps} />
-    </Display>
-  );
 
   it('renders <Display /> children', () => {
+    const wrapper = shallow(
+      <Display {...props} >
+        <Start {...startProps} />
+      </Display>
+    );
     const start = wrapper.find(Start);
     expect(start).to.have.lengthOf(1);
   });
 
   it('<Display /> contains text', () => {
+    const wrapper = shallow(
+      <Display {...props} >
+        <Start {...startProps} />
+      </Display>
+    );
     expect(wrapper.text()).to.contains('account balance');
   });
 })

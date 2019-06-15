@@ -11,7 +11,7 @@ import {
   ATM_STATE_START,
   ATM_STATE_WITHDRAW
 } from '../domain/atm/state/constants';
-import { ATM_ERROR_FUNDS_MSG } from '../domain/atm/messages/constants';
+import { ATM_ERROR_FUNDS_MSG } from '../domain/atm/message/constants';
 
 export const INITIAL_STATE = {
   keyPadInput: 0,

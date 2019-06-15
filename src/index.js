@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
-import * as serviceWorker from './serviceWorker';
-import store from './store';
 import { Provider } from 'react-redux';
-import Atm from './containers/Atm';
+import store from './store';
+import * as serviceWorker from './serviceWorker';
+import Atm from './containers/Atm/Atm';
 
 ReactDOM.render(
   <Provider store={store}><Atm /></Provider>,

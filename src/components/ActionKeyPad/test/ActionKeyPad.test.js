@@ -11,15 +11,17 @@ describe('<ActionKeyPad />', () => {
     cancelKeyPress: sinon.spy(),
     clearKeyPress: sinon.spy()
   };
-  const wrapper = shallow(
-    <ActionKeyPad {...props} />
-  );
-
   it('renders <ActionKeyPad />', () => {
+    const wrapper = shallow(
+      <ActionKeyPad {...props} />
+    );
     expect(wrapper).to.have.lengthOf(1);
   });
 
   it('renders <ActionKeyPad /> children', () => {
+    const wrapper = shallow(
+      <ActionKeyPad {...props} />
+    );
     expect(wrapper.find(KeyPadButton)).to.have.lengthOf(4);
   });
 })

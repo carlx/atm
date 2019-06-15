@@ -12,7 +12,7 @@ import {
   ATM_STATE_ERROR,
   ATM_STATE_WITHDRAW
 } from '../../domain/atm/state/constants';
-import { ATM_ERROR_FUNDS_MSG } from '../../domain/atm/messages/constants';
+import { ATM_ERROR_FUNDS_MSG } from '../../domain/atm/message/constants';
 
 describe('Atm reducer', () => {
   it('should return the initial state', () => {

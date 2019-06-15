@@ -10,15 +10,18 @@ describe('<NumberKeyPad />', () => {
     numberKeyPress: () => sinon.spy(),
     disabled: false
   };
-  const wrapper = shallow(
-    <NumberKeyPad {...props} />
-  );
 
   it('renders <NumberKeyPad />', () => {
+    const wrapper = shallow(
+      <NumberKeyPad {...props} />
+    );
     expect(wrapper).to.have.lengthOf(1);
   });
 
   it('renders <NumberKeyPad /> children', () => {
+    const wrapper = shallow(
+      <NumberKeyPad {...props} />
+    );
     expect(wrapper.find(KeyPadButton)).to.have.lengthOf(12);
   });
 })
